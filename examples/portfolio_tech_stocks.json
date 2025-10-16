@@ -1,0 +1,58 @@
+{
+  "portfolio": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms Inc.",
+      "market": "NASDAQ"
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix Inc.",
+      "market": "NASDAQ"
+    }
+  ],
+  "forex": [
+    {
+      "ticker": "EURUSD=X",
+      "name": "EUR/USD",
+      "market": "FOREX"
+    }
+  ]
+}

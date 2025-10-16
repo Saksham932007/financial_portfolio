@@ -1,0 +1,42 @@
+{
+  "portfolio": [
+    {
+      "ticker": "SPY",
+      "name": "SPDR S&P 500 ETF",
+      "market": "NYSE"
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "DIA",
+      "name": "SPDR Dow Jones Industrial Average ETF",
+      "market": "NYSE"
+    },
+    {
+      "ticker": "IWM",
+      "name": "iShares Russell 2000 ETF",
+      "market": "NYSE"
+    },
+    {
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "market": "NYSE"
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Trust",
+      "market": "NYSE"
+    },
+    {
+      "ticker": "TLT",
+      "name": "iShares 20+ Year Treasury Bond ETF",
+      "market": "NASDAQ"
+    }
+  ],
+  "forex": []
+}

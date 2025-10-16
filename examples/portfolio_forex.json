@@ -1,0 +1,47 @@
+{
+  "portfolio": [
+    {
+      "ticker": "EURUSD=X",
+      "name": "EUR/USD",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "GBPUSD=X",
+      "name": "GBP/USD",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "USDJPY=X",
+      "name": "USD/JPY",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "AUDUSD=X",
+      "name": "AUD/USD",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "USDCAD=X",
+      "name": "USD/CAD",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "USDCHF=X",
+      "name": "USD/CHF",
+      "market": "FOREX"
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "BTC-USD",
+      "name": "Bitcoin USD",
+      "market": "CRYPTO"
+    },
+    {
+      "ticker": "ETH-USD",
+      "name": "Ethereum USD",
+      "market": "CRYPTO"
+    }
+  ],
+  "forex": []
+}
