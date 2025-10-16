@@ -1,0 +1,48 @@
+{
+  "portfolio": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla Inc.",
+      "market": "NASDAQ"
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA Corporation",
+      "market": "NASDAQ"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon.com Inc.",
+      "market": "NASDAQ"
+    }
+  ],
+  "forex": [
+    {
+      "ticker": "EURUSD=X",
+      "name": "EUR/USD",
+      "market": "FOREX"
+    },
+    {
+      "ticker": "GBPUSD=X",
+      "name": "GBP/USD",
+      "market": "FOREX"
+    }
+  ]
+}
