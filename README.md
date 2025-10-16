@@ -1,6 +1,12 @@
 # 🤖 AI Financial Portfolio Manager Agent
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 An advanced AI-powered financial portfolio management system that provides real-time, data-driven trading recommendations using Google's Gemini API. This autonomous agent continuously monitors markets, performs technical and sentiment analysis, and generates actionable BUY/SELL/HOLD recommendations with an 80%+ accuracy target.
+
+📚 **[Quick Start](QUICKSTART.md)** | **[API Docs](API.md)** | **[FAQ](FAQ.md)** | **[Roadmap](ROADMAP.md)** | **[Docker Guide](DOCKER.md)**
 
 ## ⚠️ IMPORTANT DISCLAIMER
 
