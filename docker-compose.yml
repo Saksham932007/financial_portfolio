@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  portfolio-agent:
+    build: .
+    container_name: ai-portfolio-manager
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./portfolio.json:/app/portfolio.json:ro
+      - ./output:/app/output
+      - ./logs:/app/logs
+    environment:
+      - UPDATE_INTERVAL_SECONDS=${UPDATE_INTERVAL_SECONDS:-60}
+      - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-70}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    command: python main.py
+    
+  # Optional: Run in single analysis mode
+  portfolio-agent-single:
+    build: .
+    container_name: ai-portfolio-manager-single
+    env_file:
+      - .env
+    volumes:
+      - ./portfolio.json:/app/portfolio.json:ro
+      - ./output:/app/output
+      - ./logs:/app/logs
+    command: python main.py --single
+    profiles:
+      - single
