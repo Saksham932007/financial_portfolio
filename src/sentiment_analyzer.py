@@ -17,16 +17,13 @@ class SentimentAnalyzer:
     def __init__(self):
         self.logger = PortfolioLogger.get_logger('sentiment_analyzer')
         
-        # Configure Gemini with Google Search grounding
+        # Configure Gemini API
         genai.configure(api_key=Config.GEMINI_API_KEY)
         
-        # Use model with grounding capability
-        self.model = genai.GenerativeModel(
-            Config.GEMINI_MODEL,
-            tools='google_search_retrieval'
-        )
-        
-        self.logger.info("SentimentAnalyzer initialized with Gemini API and Google Search grounding")
+        # Use model without grounding (Search grounding not supported for gemini-2.5-flash)
+        self.model = genai.GenerativeModel(Config.GEMINI_MODEL)
+        self.has_grounding = False
+        self.logger.info("SentimentAnalyzer initialized with Gemini API")
     
     def analyze_sentiment(self, ticker: str, company_name: str = None) -> Optional[Dict[str, Any]]:
         """

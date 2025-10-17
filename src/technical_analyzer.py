@@ -40,11 +40,11 @@ class TechnicalAnalyzer:
                 self.logger.warning(f"No price data available for {ticker}")
                 return None
             
-            # Prepare price data for Gemini
-            price_list = price_data['Close'].tail(200).tolist()
-            high_list = price_data['High'].tail(200).tolist()
-            low_list = price_data['Low'].tail(200).tolist()
-            volume_list = price_data['Volume'].tail(200).tolist()
+            # Prepare price data for Gemini (use last 50 days to reduce prompt size)
+            price_list = price_data['Close'].tail(50).tolist()
+            high_list = price_data['High'].tail(50).tolist()
+            low_list = price_data['Low'].tail(50).tolist()
+            volume_list = price_data['Volume'].tail(50).tolist()
             
             # Create comprehensive prompt for Gemini
             prompt = self._create_technical_analysis_prompt(
