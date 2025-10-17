@@ -7,6 +7,7 @@ Thank you for your interest in contributing to this project! This document provi
 ### Reporting Bugs
 
 If you find a bug, please create an issue with:
+
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
@@ -16,6 +17,7 @@ If you find a bug, please create an issue with:
 ### Suggesting Enhancements
 
 For feature requests:
+
 - Describe the feature and its benefits
 - Explain how it would work
 - Consider edge cases and potential issues
@@ -24,26 +26,31 @@ For feature requests:
 
 1. **Fork the repository**
 2. **Create a feature branch**
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 3. **Make your changes**
+
    - Follow the existing code style
    - Add comments for complex logic
    - Update documentation if needed
 
 4. **Test your changes**
+
    ```bash
    python test_setup.py
    ```
 
 5. **Commit with clear messages**
+
    ```bash
    git commit -m "feat: Add new feature"
    ```
-   
+
    Use conventional commit format:
+
    - `feat:` - New feature
    - `fix:` - Bug fix
    - `docs:` - Documentation changes
@@ -53,6 +60,7 @@ For feature requests:
    - `chore:` - Maintenance tasks
 
 6. **Push to your fork**
+
    ```bash
    git push origin feature/your-feature-name
    ```
@@ -73,6 +81,7 @@ For feature requests:
 - Use meaningful variable names
 
 Example:
+
 ```python
 def calculate_risk_level(
     current_price: float,
@@ -80,11 +89,11 @@ def calculate_risk_level(
 ) -> Dict[str, Any]:
     """
     Calculate risk management levels.
-    
+
     Args:
         current_price: Current stock price
         historical_data: Historical OHLCV data
-        
+
     Returns:
         Dictionary with stop-loss and take-profit levels
     """
@@ -109,23 +118,27 @@ def calculate_risk_level(
 ## 🏗️ Development Setup
 
 1. Clone your fork:
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/financial_portfolio.git
    cd financial_portfolio
    ```
 
 2. Create virtual environment:
+
    ```bash
    python -m venv venv
    source venv/bin/activate
    ```
 
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Create .env:
+
    ```bash
    cp .env.example .env
    # Add your API keys
@@ -139,6 +152,7 @@ def calculate_risk_level(
 ## 🎨 Areas for Contribution
 
 ### High Priority
+
 - [ ] Backtesting framework
 - [ ] Performance analytics
 - [ ] Unit tests for all modules
@@ -146,6 +160,7 @@ def calculate_risk_level(
 - [ ] Rate limiting optimization
 
 ### Medium Priority
+
 - [ ] Web dashboard
 - [ ] Additional data sources
 - [ ] More technical indicators
@@ -153,12 +168,14 @@ def calculate_risk_level(
 - [ ] Multi-timeframe analysis
 
 ### Documentation
+
 - [ ] Video tutorials
 - [ ] More examples
 - [ ] FAQ section
 - [ ] Troubleshooting guide
 
 ### Code Quality
+
 - [ ] Type hint coverage
 - [ ] Docstring completeness
 - [ ] Code refactoring

@@ -15,11 +15,13 @@ An advanced AI-powered financial portfolio management system that provides real-
 ## 🌟 Key Features
 
 ### Real-Time Market Analysis
+
 - **Live Price Tracking**: Continuous monitoring of stock prices, volume, and market metrics
 - **Multi-Market Support**: Handles stocks (NYSE, NASDAQ) and Forex markets
 - **Intelligent Caching**: Optimized data fetching with smart caching mechanisms
 
 ### Advanced Technical Analysis (via Gemini API)
+
 - **RSI (Relative Strength Index)**: Identifies overbought/oversold conditions
 - **MACD (Moving Average Convergence Divergence)**: Tracks momentum and trend direction
 - **Bollinger Bands**: Gauges market volatility and price action zones
@@ -28,6 +30,7 @@ An advanced AI-powered financial portfolio management system that provides real-
 - **Trend Analysis**: Comprehensive trend direction and strength assessment
 
 ### Real-Time News & Sentiment Analysis
+
 - **Google Search Grounding**: Gemini API with real-time Google Search integration
 - **Multi-Source News**: Aggregates from Bloomberg, Reuters, CNBC, WSJ, and more
 - **Sentiment Scoring**: Quantified sentiment from -1.0 (very negative) to +1.0 (very positive)
@@ -35,6 +38,7 @@ An advanced AI-powered financial portfolio management system that provides real-
 - **Event Tracking**: Identifies upcoming events (earnings, product launches, etc.)
 
 ### Intelligent Recommendation Engine
+
 - **Clear Signals**: BUY, SELL, or HOLD recommendations
 - **Confidence Scores**: 0-100% confidence rating for each recommendation
 - **Data Synthesis**: Combines technical indicators, sentiment, and risk metrics
@@ -42,12 +46,14 @@ An advanced AI-powered financial portfolio management system that provides real-
 - **Risk Management**: Stop-loss and take-profit levels with every recommendation
 
 ### Risk Management
+
 - **Volatility-Based Calculations**: Uses ATR (Average True Range) for dynamic risk levels
 - **Support/Resistance Integration**: Incorporates technical levels into risk calculations
 - **Dual Take-Profit Targets**: Conservative (TP1) and aggressive (TP2) exit points
 - **Risk-Reward Ratios**: Ensures favorable risk-reward profiles (minimum 1.5:1)
 
 ### Comprehensive Logging & Output
+
 - **JSON Logging**: Structured logs for all operations and decisions
 - **Historical Tracking**: Maintains history of all recommendations
 - **Console Display**: Beautiful, readable terminal output
@@ -105,12 +111,14 @@ MAX_CONCURRENT_STOCKS=10
 #### Getting API Keys
 
 **Gemini API Key** (Required):
+
 1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
 2. Sign in with your Google account
 3. Click "Create API Key"
 4. Copy the key to your `.env` file
 
 **Alpha Vantage API Key** (Optional):
+
 1. Visit [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
 2. Enter your email to get a free API key
 3. Copy to `.env` file (optional - used as backup data source)
@@ -161,6 +169,7 @@ python main.py
 ```
 
 This will:
+
 - Analyze all tickers in your portfolio
 - Generate recommendations every 60 seconds (configurable)
 - Save all recommendations to `output/` directory
@@ -247,13 +256,13 @@ All recommendations are saved as JSON files in `output/recommendations/`:
 {
   "ticker": "AAPL",
   "timestamp": "2023-10-27T14:35:00Z",
-  "current_price": 170.50,
+  "current_price": 170.5,
   "recommendation": "BUY",
   "confidence_score": 85,
   "reasoning": "Strong bullish momentum...",
   "risk_management": {
     "stop_loss": 165.75,
-    "take_profit_1": 175.00,
+    "take_profit_1": 175.0,
     "take_profit_2": 180.25,
     "risk_reward_ratio_1": 2.5
   },
@@ -262,7 +271,7 @@ All recommendations are saved as JSON files in `output/recommendations/`:
     "macd": 1.25,
     "trend": "uptrend"
   },
-  "sentiment_score": 0.80
+  "sentiment_score": 0.8
 }
 ```
 
@@ -361,15 +370,15 @@ financial_portfolio/
 
 ### Agent Settings (.env)
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `UPDATE_INTERVAL_SECONDS` | 60 | Seconds between analysis cycles |
-| `CONFIDENCE_THRESHOLD` | 70 | Minimum confidence for recommendations |
-| `MAX_CONCURRENT_STOCKS` | 10 | Maximum stocks to analyze concurrently |
-| `DEFAULT_STOP_LOSS_PERCENTAGE` | 5.0 | Default stop loss % |
-| `DEFAULT_TAKE_PROFIT_1_PERCENTAGE` | 10.0 | Default first take profit % |
-| `DEFAULT_TAKE_PROFIT_2_PERCENTAGE` | 20.0 | Default second take profit % |
-| `LOG_LEVEL` | INFO | Logging level (DEBUG, INFO, WARNING, ERROR) |
+| Variable                           | Default | Description                                 |
+| ---------------------------------- | ------- | ------------------------------------------- |
+| `UPDATE_INTERVAL_SECONDS`          | 60      | Seconds between analysis cycles             |
+| `CONFIDENCE_THRESHOLD`             | 70      | Minimum confidence for recommendations      |
+| `MAX_CONCURRENT_STOCKS`            | 10      | Maximum stocks to analyze concurrently      |
+| `DEFAULT_STOP_LOSS_PERCENTAGE`     | 5.0     | Default stop loss %                         |
+| `DEFAULT_TAKE_PROFIT_1_PERCENTAGE` | 10.0    | Default first take profit %                 |
+| `DEFAULT_TAKE_PROFIT_2_PERCENTAGE` | 20.0    | Default second take profit %                |
+| `LOG_LEVEL`                        | INFO    | Logging level (DEBUG, INFO, WARNING, ERROR) |
 
 ### Technical Indicators (config.py)
 
@@ -417,27 +426,35 @@ MA_PERIODS = [50, 100, 200]
 ### Common Issues
 
 **1. API Key Errors**
+
 ```
 Error: GEMINI_API_KEY is required but not set
 ```
+
 Solution: Ensure your `.env` file contains a valid Gemini API key
 
 **2. No Data Retrieved**
+
 ```
 Warning: No recent data available for TICKER
 ```
+
 Solution: Check ticker symbol is correct, try during market hours, verify internet connection
 
 **3. Import Errors**
+
 ```
 ModuleNotFoundError: No module named 'google.generativeai'
 ```
+
 Solution: Run `pip install -r requirements.txt` in your virtual environment
 
 **4. Rate Limiting**
+
 ```
 Error: API rate limit exceeded
 ```
+
 Solution: Increase `UPDATE_INTERVAL_SECONDS` in `.env`, reduce number of tickers
 
 ### Debug Mode
@@ -449,6 +466,7 @@ LOG_LEVEL=DEBUG
 ```
 
 Check logs:
+
 ```bash
 tail -f logs/portfolio_agent.log
 ```
@@ -479,6 +497,7 @@ This project is provided as-is for educational and informational purposes.
 ## 📧 Support
 
 For issues, questions, or suggestions:
+
 1. Check existing documentation
 2. Review troubleshooting section
 3. Open an issue on GitHub

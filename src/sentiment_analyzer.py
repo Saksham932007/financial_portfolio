@@ -17,11 +17,22 @@ class SentimentAnalyzer:
     def __init__(self):
         self.logger = PortfolioLogger.get_logger('sentiment_analyzer')
         
-        # Configure Gemini API
+        # Configure Gemini API with safety settings
         genai.configure(api_key=Config.GEMINI_API_KEY)
         
+        # Set safety settings to allow financial analysis
+        safety_settings = [
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+        ]
+        
         # Use model without grounding (Search grounding not supported for gemini-2.5-flash)
-        self.model = genai.GenerativeModel(Config.GEMINI_MODEL)
+        self.model = genai.GenerativeModel(
+            Config.GEMINI_MODEL,
+            safety_settings=safety_settings
+        )
         self.has_grounding = False
         self.logger.info("SentimentAnalyzer initialized with Gemini API")
     

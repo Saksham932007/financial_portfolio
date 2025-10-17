@@ -9,11 +9,13 @@ This guide helps you optimize the AI Financial Portfolio Manager for better perf
 ### 1. Reduce Update Interval
 
 For long-term investing:
+
 ```env
 UPDATE_INTERVAL_SECONDS=300  # 5 minutes instead of 60 seconds
 ```
 
 For day trading (careful with rate limits):
+
 ```env
 UPDATE_INTERVAL_SECONDS=30  # 30 seconds
 ```
@@ -21,12 +23,13 @@ UPDATE_INTERVAL_SECONDS=30  # 30 seconds
 ### 2. Limit Portfolio Size
 
 Start with 3-5 stocks and gradually increase:
+
 ```json
 {
   "portfolio": [
-    {"ticker": "AAPL", "name": "Apple", "market": "NASDAQ"},
-    {"ticker": "MSFT", "name": "Microsoft", "market": "NASDAQ"},
-    {"ticker": "GOOGL", "name": "Google", "market": "NASDAQ"}
+    { "ticker": "AAPL", "name": "Apple", "market": "NASDAQ" },
+    { "ticker": "MSFT", "name": "Microsoft", "market": "NASDAQ" },
+    { "ticker": "GOOGL", "name": "Google", "market": "NASDAQ" }
   ]
 }
 ```
@@ -40,10 +43,12 @@ Built-in caching is 60 seconds. Data is automatically reused within this window.
 ### Gemini API
 
 **Rate Limits** (Free tier):
+
 - 60 requests per minute
 - 1,500 requests per day
 
 **Tips**:
+
 1. Increase update interval
 2. Reduce number of stocks
 3. Use single analysis mode for testing
@@ -52,6 +57,7 @@ Built-in caching is 60 seconds. Data is automatically reused within this window.
 ### yfinance Data
 
 **Best Practices**:
+
 - Data is free and unlimited
 - But respect their servers
 - Cache is built-in (60s)
@@ -73,6 +79,7 @@ MAX_CONCURRENT_STOCKS=5  # Instead of 10
 ```
 
 Monitor memory:
+
 ```bash
 docker stats portfolio-agent  # If using Docker
 ```
@@ -82,6 +89,7 @@ docker stats portfolio-agent  # If using Docker
 ### 1. Parallel Processing (Future Enhancement)
 
 Currently processes sequentially. Future versions may support:
+
 - Concurrent API calls
 - Parallel technical analysis
 - Async operations
@@ -89,6 +97,7 @@ Currently processes sequentially. Future versions may support:
 ### 2. Database Integration (Future)
 
 For faster historical data access:
+
 - Store recommendations in SQLite
 - Cache technical indicators
 - Reduce redundant calculations
@@ -150,6 +159,7 @@ LOG_LEVEL=WARNING  # Instead of DEBUG or INFO
 ### Log Rotation
 
 Add to your deployment:
+
 ```bash
 # Linux logrotate
 /path/to/logs/*.log {
@@ -204,6 +214,7 @@ print(f"Execution time: {time.time() - start:.2f}s")
 ### Monitor API Calls
 
 Check logs for:
+
 - API response times
 - Failed requests
 - Rate limit warnings
@@ -231,15 +242,18 @@ for file in files:
 ### Gemini API Costs
 
 Free tier limits:
+
 - 60 RPM (requests per minute)
 - 1,500 RPD (requests per day)
 
 With 10 stocks and 60s interval:
+
 - 10 stocks × 3 API calls each = 30 calls per cycle
 - 1 cycle per minute = 30-40 calls per minute
 - **You'll hit rate limits!**
 
 **Solutions**:
+
 1. Reduce stocks to 5
 2. Increase interval to 120s
 3. Upgrade to paid tier
@@ -255,6 +269,7 @@ With 10 stocks and 60s interval:
 ### Typical Performance
 
 Single stock analysis:
+
 - Data fetch: 1-2s
 - Technical analysis: 2-3s
 - Sentiment analysis: 3-5s
@@ -262,22 +277,26 @@ Single stock analysis:
 - **Total: ~10-15s per stock**
 
 10 stocks:
+
 - Sequential: ~2-3 minutes
 - With optimizations: ~1-2 minutes
 
 ### Hardware Requirements
 
 **Minimum**:
+
 - 1 CPU core
 - 512MB RAM
 - Stable internet
 
 **Recommended**:
+
 - 2+ CPU cores
 - 1GB+ RAM
 - Fast internet (10+ Mbps)
 
 **Optimal**:
+
 - 4+ CPU cores
 - 2GB+ RAM
 - Cloud deployment (low latency)
@@ -285,6 +304,7 @@ Single stock analysis:
 ## Future Optimizations
 
 Planned improvements:
+
 - [ ] Async API calls
 - [ ] Parallel processing
 - [ ] Database caching
@@ -298,6 +318,7 @@ Planned improvements:
 ### Symptom: Each stock takes >30s
 
 **Check**:
+
 1. Internet speed
 2. API response times in logs
 3. Gemini API key validity
@@ -305,6 +326,7 @@ Planned improvements:
 ### Symptom: Memory growing
 
 **Fix**:
+
 1. Reduce portfolio size
 2. Clear cache periodically
 3. Restart agent daily
@@ -312,6 +334,7 @@ Planned improvements:
 ### Symptom: Rate limit errors
 
 **Fix**:
+
 1. Increase UPDATE_INTERVAL_SECONDS
 2. Reduce number of stocks
 3. Check API quotas

@@ -449,6 +449,7 @@ else:
 ## Future API Endpoints
 
 Planned for future releases:
+
 - REST API server
 - WebSocket streaming
 - GraphQL interface

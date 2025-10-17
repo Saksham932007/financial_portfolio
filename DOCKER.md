@@ -5,22 +5,26 @@
 ### Using Docker Compose (Recommended)
 
 1. **Build the image:**
+
    ```bash
    docker-compose build
    ```
 
 2. **Create `.env` file:**
+
    ```bash
    cp .env.example .env
    # Edit .env and add your GEMINI_API_KEY
    ```
 
 3. **Run the agent:**
+
    ```bash
    docker-compose up -d
    ```
 
 4. **View logs:**
+
    ```bash
    docker-compose logs -f
    ```
@@ -39,11 +43,13 @@ docker-compose --profile single run --rm portfolio-agent-single
 ### Using Docker Directly
 
 1. **Build:**
+
    ```bash
    docker build -t ai-portfolio-manager .
    ```
 
 2. **Run:**
+
    ```bash
    docker run -d \
      --name portfolio-agent \
@@ -55,6 +61,7 @@ docker-compose --profile single run --rm portfolio-agent-single
    ```
 
 3. **View logs:**
+
    ```bash
    docker logs -f portfolio-agent
    ```
@@ -123,47 +130,54 @@ spec:
         app: portfolio-agent
     spec:
       containers:
-      - name: agent
-        image: ai-portfolio-manager:latest
-        envFrom:
-        - secretRef:
-            name: portfolio-secrets
-        volumeMounts:
-        - name: portfolio-config
-          mountPath: /app/portfolio.json
-          subPath: portfolio.json
-        - name: output
-          mountPath: /app/output
+        - name: agent
+          image: ai-portfolio-manager:latest
+          envFrom:
+            - secretRef:
+                name: portfolio-secrets
+          volumeMounts:
+            - name: portfolio-config
+              mountPath: /app/portfolio.json
+              subPath: portfolio.json
+            - name: output
+              mountPath: /app/output
       volumes:
-      - name: portfolio-config
-        configMap:
-          name: portfolio-config
-      - name: output
-        persistentVolumeClaim:
-          claimName: portfolio-output
+        - name: portfolio-config
+          configMap:
+            name: portfolio-config
+        - name: output
+          persistentVolumeClaim:
+            claimName: portfolio-output
 ```
 
 ## Troubleshooting
 
 ### Container exits immediately
+
 Check logs:
+
 ```bash
 docker logs portfolio-agent
 ```
 
 Common issues:
+
 - Missing GEMINI_API_KEY
 - Invalid portfolio.json
 - Network connectivity
 
 ### Can't access output files
+
 Ensure volume mounts have correct permissions:
+
 ```bash
 chmod -R 755 output logs
 ```
 
 ### High memory usage
+
 Reduce number of tickers in portfolio or increase container memory limit:
+
 ```bash
 docker run -m 512m ...
 ```

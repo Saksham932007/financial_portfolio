@@ -25,18 +25,21 @@ To create the most comprehensive, accurate, and user-friendly AI-powered financi
 ### Planned Features
 
 - [ ] **Backtesting Framework**
+
   - Historical performance testing
   - Strategy validation
   - Accuracy metrics
   - Performance reports
 
 - [ ] **Performance Analytics Dashboard**
+
   - Win/loss ratios
   - Average returns
   - Best/worst performers
   - Interactive charts
 
 - [ ] **Enhanced Data Sources**
+
   - Additional market data providers
   - Alternative data integration
   - Earnings calendar
@@ -53,18 +56,21 @@ To create the most comprehensive, accurate, and user-friendly AI-powered financi
 ### Planned Features
 
 - [ ] **Web Dashboard**
+
   - Real-time updates
   - Interactive charts
   - Portfolio management UI
   - Mobile-responsive design
 
 - [ ] **Notification System**
+
   - Email alerts
   - SMS notifications
   - Webhook integrations
   - Custom alert rules
 
 - [ ] **Multi-Timeframe Analysis**
+
   - 1-minute to monthly charts
   - Timeframe correlation
   - Multi-horizon recommendations
@@ -80,18 +86,21 @@ To create the most comprehensive, accurate, and user-friendly AI-powered financi
 ### Major Features
 
 - [ ] **Machine Learning Integration**
+
   - Pattern recognition
   - Predictive modeling
   - Anomaly detection
   - Adaptive learning
 
 - [ ] **Trading Platform Integration**
+
   - Broker API connections
   - Automated order execution
   - Paper trading mode
   - Real money trading (opt-in)
 
 - [ ] **Advanced Risk Management**
+
   - Position sizing calculator
   - Portfolio VaR (Value at Risk)
   - Correlation analysis
@@ -108,18 +117,21 @@ To create the most comprehensive, accurate, and user-friendly AI-powered financi
 ### Advanced Capabilities
 
 - [ ] **AI Research Assistant**
+
   - Automated fundamental analysis
   - Earnings report summarization
   - SEC filing analysis
   - Competitive analysis
 
 - [ ] **Global Market Coverage**
+
   - International exchanges
   - Emerging markets
   - Commodities
   - Options and futures
 
 - [ ] **Enterprise Features**
+
   - Multi-user support
   - Team collaboration
   - API access
@@ -138,6 +150,7 @@ To create the most comprehensive, accurate, and user-friendly AI-powered financi
 Vote on features at: [GitHub Discussions](https://github.com/Saksham932007/financial_portfolio/discussions)
 
 Most requested:
+
 1. Backtesting framework
 2. Web dashboard
 3. Email/SMS alerts
@@ -179,6 +192,7 @@ We follow [Semantic Versioning](https://semver.org/):
 ## Support the Project
 
 Ways to help:
+
 - ⭐ Star on GitHub
 - 🐛 Report bugs
 - 💡 Suggest features

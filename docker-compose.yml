@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   portfolio-agent:
@@ -16,7 +16,7 @@ services:
       - CONFIDENCE_THRESHOLD=${CONFIDENCE_THRESHOLD:-70}
       - LOG_LEVEL=${LOG_LEVEL:-INFO}
     command: python main.py
-    
+
   # Optional: Run in single analysis mode
   portfolio-agent-single:
     build: .

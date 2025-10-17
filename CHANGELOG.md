@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2025-10-16
 
 ### Added
+
 - Initial release of AI Financial Portfolio Manager Agent
 - Real-time market data fetching using yfinance
 - Technical analysis module with Gemini API integration
@@ -67,6 +68,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Setup verification script
 
 ### Features
+
 - Support for stocks (NYSE, NASDAQ)
 - Support for Forex pairs
 - Support for cryptocurrency
@@ -77,6 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Flexible risk management settings
 
 ### Documentation
+
 - Installation instructions
 - Usage examples
 - API configuration guide
@@ -87,6 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Planned Features
+
 - Backtesting framework
 - Performance tracking and analytics
 - Multi-timeframe analysis
@@ -104,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cloud deployment guides
 
 ### Planned Improvements
+
 - Enhanced error recovery
 - Better rate limit handling
 - Improved caching strategies
@@ -129,6 +134,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute to this project.
 ## Versioning Policy
 
 We use [SemVer](http://semver.org/) for versioning:
+
 - **MAJOR** version for incompatible API changes
 - **MINOR** version for backwards-compatible functionality additions
 - **PATCH** version for backwards-compatible bug fixes

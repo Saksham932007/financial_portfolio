@@ -5,7 +5,9 @@ This directory contains sample portfolio configurations to help you get started.
 ## Available Examples
 
 ### 1. Tech Stocks (`portfolio_tech_stocks.json`)
+
 Major technology companies:
+
 - AAPL (Apple)
 - MSFT (Microsoft)
 - GOOGL (Google/Alphabet)
@@ -15,12 +17,15 @@ Major technology companies:
 - META (Meta/Facebook)
 
 **Usage:**
+
 ```bash
 python main.py --portfolio examples/portfolio_tech_stocks.json
 ```
 
 ### 2. ETFs (`portfolio_etfs.json`)
+
 Popular index and sector ETFs:
+
 - SPY (S&P 500)
 - QQQ (NASDAQ-100)
 - DIA (Dow Jones)
@@ -28,12 +33,15 @@ Popular index and sector ETFs:
 - VTI (Total Stock Market)
 
 **Usage:**
+
 ```bash
 python main.py --portfolio examples/portfolio_etfs.json
 ```
 
 ### 3. Forex & Crypto (`portfolio_forex.json`)
+
 Major forex pairs and cryptocurrencies:
+
 - EUR/USD
 - GBP/USD
 - USD/JPY
@@ -42,6 +50,7 @@ Major forex pairs and cryptocurrencies:
 - ETH-USD (Ethereum)
 
 **Usage:**
+
 ```bash
 python main.py --portfolio examples/portfolio_forex.json
 ```

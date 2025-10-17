@@ -21,6 +21,7 @@ Please do not create a public GitHub issue for security vulnerabilities.
 Email security details to: [Create an email or use GitHub Security Advisories]
 
 Or use GitHub's private vulnerability reporting feature:
+
 1. Go to the repository
 2. Click "Security" tab
 3. Click "Report a vulnerability"
@@ -28,6 +29,7 @@ Or use GitHub's private vulnerability reporting feature:
 ### 3. Include Details
 
 Please include:
+
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
@@ -45,17 +47,20 @@ Please include:
 ### For Users
 
 1. **API Keys**
+
    - Never commit `.env` files
    - Use environment variables
    - Rotate keys regularly
    - Keep keys private
 
 2. **Dependencies**
+
    - Keep dependencies updated
    - Review `requirements.txt` regularly
    - Use virtual environments
 
 3. **Data Security**
+
    - Don't share portfolio files publicly
    - Secure your output directory
    - Review logs before sharing
@@ -68,12 +73,14 @@ Please include:
 ### For Contributors
 
 1. **Code Review**
+
    - Review all dependencies
    - Check for hardcoded secrets
    - Validate input data
    - Handle errors securely
 
 2. **Sensitive Data**
+
    - No API keys in code
    - No personal information
    - No financial credentials
@@ -88,24 +95,28 @@ Please include:
 ## Known Security Considerations
 
 ### API Keys
+
 - Gemini API keys must be kept secret
 - Store in `.env` file only
 - Never log API keys
 - Use environment variables in production
 
 ### Data Privacy
+
 - Market data is public
 - Recommendations stored locally
 - No data sent to third parties (except APIs)
 - User responsible for data security
 
 ### Network Requests
+
 - All API calls use HTTPS
 - Validate responses
 - Handle rate limiting
 - Timeout protection
 
 ### Input Validation
+
 - Ticker symbols validated
 - JSON parsing secured
 - File operations sandboxed
@@ -127,6 +138,7 @@ When a vulnerability is reported:
 ## Security Updates
 
 Subscribe to security updates:
+
 - Watch the repository
 - Enable GitHub notifications
 - Check CHANGELOG.md regularly
@@ -137,6 +149,7 @@ Subscribe to security updates:
 We appreciate security researchers and users who report vulnerabilities responsibly.
 
 Contributors who report valid security issues may be acknowledged in:
+
 - CHANGELOG.md
 - Security advisories
 - Project documentation

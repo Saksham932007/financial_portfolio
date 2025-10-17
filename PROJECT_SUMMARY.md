@@ -72,12 +72,14 @@ financial_portfolio/
 ## ✨ Key Features Implemented
 
 ### 1. **Real-Time Market Analysis**
+
 - Live price tracking via yfinance
 - Multi-asset support (stocks, forex, crypto)
 - Intelligent caching system
 - Historical data fetching
 
 ### 2. **Advanced Technical Analysis**
+
 - RSI (Relative Strength Index)
 - MACD (Moving Average Convergence Divergence)
 - Bollinger Bands
@@ -87,6 +89,7 @@ financial_portfolio/
 - All powered by Gemini API
 
 ### 3. **Sentiment Analysis**
+
 - Real-time news aggregation
 - Google Search grounding via Gemini
 - Sentiment scoring (-1.0 to +1.0)
@@ -94,6 +97,7 @@ financial_portfolio/
 - Key theme identification
 
 ### 4. **Intelligent Recommendations**
+
 - BUY/SELL/HOLD signals
 - Confidence scores (0-100%)
 - Detailed reasoning
@@ -101,6 +105,7 @@ financial_portfolio/
 - Entry/exit strategies
 
 ### 5. **Risk Management**
+
 - Dynamic stop-loss calculation
 - Dual take-profit targets
 - ATR-based volatility measurement
@@ -108,6 +113,7 @@ financial_portfolio/
 - Support/resistance integration
 
 ### 6. **Professional Output**
+
 - JSON file storage
 - Beautiful console display
 - Historical logging
@@ -115,6 +121,7 @@ financial_portfolio/
 - Structured data formats
 
 ### 7. **DevOps & Deployment**
+
 - Docker support
 - Docker Compose configuration
 - CI/CD with GitHub Actions
@@ -134,18 +141,21 @@ financial_portfolio/
 ## 📚 Documentation Highlights
 
 ### User Documentation
+
 - **README.md**: Complete guide (495 lines)
 - **QUICKSTART.md**: 5-minute setup
 - **FAQ.md**: 300+ lines of Q&A
 - **PERFORMANCE.md**: Optimization tips
 
 ### Developer Documentation
+
 - **API.md**: Module integration guide (450+ lines)
 - **CONTRIBUTING.md**: Contribution guidelines
 - **ROADMAP.md**: Future plans
 - **DOCKER.md**: Container deployment
 
 ### Safety & Security
+
 - **SECURITY.md**: Security policy
 - **LICENSE**: MIT License with disclaimer
 - **CHANGELOG.md**: Version history
@@ -153,22 +163,26 @@ financial_portfolio/
 ## 🎯 Usage Examples
 
 ### Quick Start
+
 ```bash
 ./setup.sh
 python analyze.py AAPL
 ```
 
 ### Continuous Monitoring
+
 ```bash
 python main.py
 ```
 
 ### Docker Deployment
+
 ```bash
 docker-compose up -d
 ```
 
 ### Single Analysis
+
 ```bash
 python main.py --single
 ```
@@ -232,6 +246,7 @@ python main.py --single
 ## 🎓 Learning Outcomes
 
 This project demonstrates:
+
 - AI/API integration (Gemini)
 - Real-time data processing
 - Financial analysis algorithms
@@ -243,6 +258,7 @@ This project demonstrates:
 ## 🌟 Future Enhancements
 
 See [ROADMAP.md](ROADMAP.md) for detailed plans:
+
 - Backtesting framework (v1.1.0)
 - Web dashboard (v1.2.0)
 - Machine learning integration (v2.0.0)
@@ -262,6 +278,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## 🏆 Acknowledgments
 
 Built with:
+
 - ❤️ Passion for finance and AI
 - 🧠 Google Gemini API
 - 📊 yfinance for market data
